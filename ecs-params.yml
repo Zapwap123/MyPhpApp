@@ -1,0 +1,28 @@
+version: 1
+task_definition:
+  task_execution_role: ecsTaskExecutionRole
+  network_mode: awsvpc
+  container_definitions:
+    - name: lamp-app
+      essential: true
+      image: YOUR_ECR_IMAGE
+      portMappings:
+        - containerPort: 80
+      environment:
+        - name: DB_HOST
+          value: YOUR_DB_ENDPOINT
+        - name: DB_NAME
+          value: lampdb
+        - name: DB_USER
+          value: admin
+        - name: DB_PASS
+          value: YOUR_DB_PASSWORD
+run_params:
+  network_configuration:
+    awsvpc_configuration:
+      subnets:
+        - subnet-xxxxxxxx
+        - subnet-yyyyyyyy
+      security_groups:
+        - sg-xxxxxxxx
+      assign_public_ip: DISABLED
