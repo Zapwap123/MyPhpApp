@@ -1,0 +1,11 @@
+infra-outputs.txt
+docker-compose.yml
+*.sh
+*.log
+*.zip
+pictures/
+sql/
+node_modules/
+.git/
+ecs-task-def.json
+ecs-trust.json

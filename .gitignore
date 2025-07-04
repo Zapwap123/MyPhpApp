@@ -2,3 +2,5 @@
 /docker-compose.yml
 /Dockerfile
 /provision-ecs-infra.sh
+/ecs-task-def.json
+/infra-outputs.txt
