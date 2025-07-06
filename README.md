@@ -28,6 +28,8 @@ This project deploys a containerized PHP application to **Amazon ECS Fargate** u
 - **Secrets Manager** for DB credentials and endpoint
 - **Autoscaling** enabled (target CPU = 80%)
 
+![Architecture Diagram](./pictures/ECS-Lamp-Architectural-diagram.drawio.png)
+
 ---
 
 ## 🚀 Technologies Used
